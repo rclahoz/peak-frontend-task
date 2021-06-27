@@ -7,15 +7,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
-## RUN PEAK APP AS PWA
+## How run Peak Frontend App as PWA
 
-## Build
+## First run a Build
 
-Run `ng build ''prod` to build the project for a production build. This will create a `dist` folder inside the project root.
+Run `ng build --prod` to build the project for a production build. This will create a `dist` folder inside the project root.
 
 ## Angular PWA
 
-Run the command `npm i -g http-server` for install a local http server. In this way the app is able to run as pwa app.
+Run the command `npm i -g http-server` for install a local http server. In this way the app is able to run as a pwa app.
 
 ## Running Angular PWA
 
