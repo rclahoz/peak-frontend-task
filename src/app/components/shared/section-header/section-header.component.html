@@ -1,0 +1,25 @@
+<div class="section-container" *ngIf="showComponent | async">
+	<div class="section-title" >
+		 <h3> {{ componentTitle | async }} </h3>
+	</div>
+	
+	<div class="section-bookmark" *ngIf="isButtonVisible | async">
+		<span *ngIf="showBookMark"> 
+			<button (click)="onBookmark()">
+				<img class="section-icon" src="../../../../assets/bookmarkon-icon@2x.svg" alt="'bookmark'">
+				<span class="section-bookmark_text">{{ buttonTitle }}</span>
+				
+			</button>
+		</span>
+	</div>
+	<div class="section-selected">
+		<form [formGroup]="form">
+          	<div class="form-group">
+				<select formControlName="optionSelected" class="form-control" (change)="orderChangeNotification()">
+					<option *ngFor="let item of list">{{ item.value }}</option>
+				</select>
+			</div>
+		</form>
+		
+	</div>
+</div>

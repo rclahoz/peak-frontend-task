@@ -1,0 +1,11 @@
+<header>
+    <app-notification></app-notification>
+    <div class="header-container">
+        <span [routerLink]="['/home']">
+            <img src="../../../../assets/Logo_White.png" alt="'main'">
+        </span>
+        <app-search
+            (termnsToSearch)="searchByTerms($event)"
+        ></app-search>
+    </div>
+</header>

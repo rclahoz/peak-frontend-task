@@ -1,0 +1,34 @@
+<div class="button-container">
+    <div>
+        <button (click)="onBookmark()">
+            <img src="../../../../assets/bookmarkon-icon@2x.svg" alt="'main'">
+            {{ buttonTitle }}
+        </button>
+    </div>
+</div>
+<div class="detail-container">
+    <app-spinner *ngIf="loading"></app-spinner>
+    <div class="detail-info" *ngIf="!loading">
+        <div class="detail-date">
+            <p class="detail-date_item"> {{ article?.webPublicationDate | date : 'medium'}} </p>
+        </div>
+        <div>
+            <p class="detail-title_item"> {{ article?.webTitle}} </p>
+        </div>
+        <div>
+            <p class="detail-subtitle_item"> {{ article?.headline}} </p>
+        </div>
+        <div class="detail-content">
+            <p> {{ article?.bodyText}} </p>
+        </div>
+        <div class="error" *ngIf="showErrorMsg">
+            <p> {{ errorMsg }}</p>
+        </div>
+    </div>
+    <div class="detail-img">
+        <p>
+            <img class="bookmark" src="{{article?.thumbnail}}" alt="{{article?.thumbnail}}">
+        </p>
+    </div>
+</div>
+

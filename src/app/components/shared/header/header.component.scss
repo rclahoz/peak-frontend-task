@@ -1,0 +1,19 @@
+header{
+    background: #09367a;
+    padding: 2.5em;
+    position: relative;
+}
+
+img {
+    height: 40px;
+}
+
+.header {
+    &-container {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}

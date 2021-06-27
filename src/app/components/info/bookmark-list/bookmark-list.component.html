@@ -1,0 +1,20 @@
+<section class="bookmark-container">
+    <app-spinner *ngIf="loading"></app-spinner>
+    <section class="bookmark-top">
+        <ng-container *ngIf="bookmarArticlesList.length > 0 && !loading">
+        <app-article-card
+            class="bookmark-item"
+            *ngFor="let item of bookmarArticlesList"
+            [item]="item"
+        ></app-article-card>	
+    </ng-container>
+    <div class="bookmark-empty" *ngIf="bookmarArticlesList.length === 0 && !loading">
+        <p>There is not articles in the bookmark</p>
+    </div>
+    <ng-container *ngIf="showErrorMsg">
+        <div class="error">
+            <p> {{ errorMsg }}</p>
+        </div>
+   </ng-container>
+    </section>
+</section>

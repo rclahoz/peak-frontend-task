@@ -1,0 +1,33 @@
+<div class="item-container"
+    [ngClass]="{'item-container_reduce': !item.thumbnail }"
+    [routerLink]="['/article-detail',item.id]"
+>
+    <div class="item-content"
+        [ngClass]="{'item-content_reduce': !item.thumbnail }"
+    >
+        <ng-container *ngIf="item.thumbnail">
+            <div class="item-img item-img_empty">
+                <img src="{{item.thumbnail}}" alt="{{item.thumbnail}}">
+            </div>
+            <div class="item-body">
+                <h2> {{ item.webTitle }}</h2>
+                <p *ngIf="item.body"> {{ item.body }}</p>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="!item.thumbnail && !isSearch">
+            <div class="item-content_empty">
+                <h2> {{ item.webTitle }}</h2>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="!item.thumbnail && isSearch">
+            <div class="item-img item-img_empty">
+                <img src="{{ item.thumbnail }}" alt="{{ item.thumbnail }}">
+            </div>
+            <div class="item-body height">
+                <h2> {{ item.webTitle }}</h2>
+            </div>
+        </ng-container>
+    </div>
+</div>

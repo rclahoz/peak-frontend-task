@@ -1,0 +1,44 @@
+.news {
+    &-container {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em;
+        margin-top: 3em;
+    }
+    &-top {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        width: 32%;
+        margin-right: 10px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .news {
+        &-top {
+            display: block;
+        }
+        &-item {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 602px) and (max-width: 920px) {
+    .news {
+        &-top {
+            justify-content: space-around;
+        }
+        &-item {
+            width: 40%;
+        }
+    }
+}

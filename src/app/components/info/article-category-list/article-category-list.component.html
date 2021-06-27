@@ -1,0 +1,11 @@
+<ng-container *ngIf="articleElments.length > 0">
+
+    <h2>{{ articleName }}</h2>
+    <div class="category-container">
+        <app-article-card
+            class="category-item"
+            *ngFor="let item of articleElments"
+            [item]="item"
+        ></app-article-card>
+    </div>
+</ng-container>

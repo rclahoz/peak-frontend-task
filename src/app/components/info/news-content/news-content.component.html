@@ -1,0 +1,28 @@
+<div class="news-container">
+	<app-spinner *ngIf="loading"></app-spinner>
+	 <section class="news-top">
+		 <ng-container *ngIf="topNewsList.length > 0">
+			<app-article-card
+				class="news-item"
+				*ngFor="let item of topNewsList"
+				[item]="item"
+			></app-article-card>	
+		</ng-container>
+	 </section>
+	 <section class="news-articles">
+		<ng-container *ngIf="articlesList.length > 0">
+			<app-article-category-list
+				class=""
+				*ngFor="let article of articlesList"
+				[articleList]="article"
+			>
+			</app-article-category-list>
+	   </ng-container>
+	   <ng-container *ngIf="showErrorMsg">
+			<div class="error">
+				<p> {{ errorMsg }}</p>
+			</div>
+	   </ng-container>
+	</section>
+</div>
+

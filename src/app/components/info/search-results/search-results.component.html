@@ -1,0 +1,25 @@
+<div class="search-container">
+    <app-spinner *ngIf="loading"></app-spinner>
+    <ng-container *ngIf="searchResultList.length > 0 && !loading">
+        <app-infinite-scroll (scrolled)="onLoadNextItems()" class="search-scroll">
+            <app-article-card
+                class="search-item"
+                *ngFor="let item of searchResultList"
+                [item]="item"
+                [isSearch]="true"
+            ></app-article-card>
+        </app-infinite-scroll>
+    </ng-container>
+    <ng-container *ngIf="searchResultList.length === 0 && !loading && !showErrorMsg">
+        <p>There are not match with your search</p>
+    </ng-container>
+    <ng-container *ngIf="showErrorMsg">
+        <div class="error">
+            <p> {{ errorMsg }}</p>
+        </div>
+   </ng-container>
+    <div class="no-hidden" *ngIf="!loading">
+        <button class="up" (click)="goUp()
+        "> Go Up</button>
+    </div>
+</div>

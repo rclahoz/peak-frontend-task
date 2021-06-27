@@ -1,0 +1,46 @@
+.bookmark {
+    &-container {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em;
+        margin-top: 3em;
+    }
+
+    &-top {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-empty {
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+        padding: 50px;
+    }
+    
+    &-item {
+        width: 32%;
+        margin-right: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .bookmark {
+        &-top {
+            display: block;
+        }
+    }
+    
+}
+
+@media only screen and (min-width: 602px) and (max-width: 920px) {
+    .bookmark {
+        &-top {
+            justify-content: space-around;
+        }
+
+    }
+}

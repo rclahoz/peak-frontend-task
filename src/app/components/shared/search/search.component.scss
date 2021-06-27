@@ -1,0 +1,50 @@
+.search {
+    &-box {
+        display: flex;
+        position: absolute;
+        border-bottom: 3px solid white;
+        top: 85.2%;
+        left: 90%;
+        transform: translate(-100%, -50%,);
+        background: #09367a;
+        height: 35px;
+        padding: 5px;
+
+        &:hover {
+            
+            background: #417dc1;
+            .search-text {
+                width: 230px;
+                color: white;
+            }
+        }
+    }
+
+    &-icon {
+        align-items: center;
+    }
+
+    &-text {
+        border: none;
+        background: none;
+        outline: none;
+        padding: 0;
+        color: white;
+        font-size: 12px;
+        transition: 0.7s;
+        width: 0px;
+    }
+}
+
+::placeholder {
+    color: white;
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder {
+    color: white;
+  }
+  
+  ::-ms-input-placeholder {
+    color: white;
+  }
